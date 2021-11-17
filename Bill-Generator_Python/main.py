@@ -41,7 +41,6 @@ class Bill:
 
 
         #-> Product Label Frame
-
         product_frame = LabelFrame(main_frame, text="Product Details", font=("Arial", 22,'bold'), bg="white", fg="red")
         product_frame.place(x=5, y=105, width=700, height=450)
         
@@ -50,6 +49,42 @@ class Bill:
         
         self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
         self.combo_category.grid(row=0,column=1)
+        
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Sub Category",bd=4)
+        self.label_category.grid(row=1,column=0)
+        
+        self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
+        self.combo_category.grid(row=1,column=1)
+        
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Product Name",bd=4)
+        self.label_category.grid(row=2,column=0)
+        
+        self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
+        self.combo_category.grid(row=2,column=1)
+        
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Price",bd=4)
+        self.label_category.grid(row=3,column=0)
+        
+        self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
+        self.combo_category.grid(row=3,column=1)
+        
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Quantity",bd=4)
+        self.label_category.grid(row=4,column=0)
+        
+        self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
+        self.combo_category.grid(row=4,column=1)
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 if __name__ == '__main__':
     root = Tk()
