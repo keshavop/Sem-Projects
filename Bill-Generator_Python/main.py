@@ -11,8 +11,7 @@ class Bill:
         
         
         #-> TITLE
-        lbl_title = Label(self.root, text="Billing Software", font=(
-            "Cascadia Code", 36, "bold"), bg="slateblue1", fg="pink")
+        lbl_title = Label(self.root, text="Billing Software", font=("Cascadia Code", 36, "bold"), bg="slateblue1", fg="pink")
         lbl_title.place(x=0, y=0, width=1400, height=75)
 
         main_frame = Frame(self.root, bd=5, relief=GROOVE, bg="white")
