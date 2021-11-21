@@ -9,6 +9,7 @@ class Bill:
         self.root.geometry("1400x800+5+5")
         self.root.title("Billing Software")
         
+        
         #-> TITLE
         lbl_title = Label(self.root, text="Billing Software", font=(
             "Cascadia Code", 36, "bold"), bg="slateblue1", fg="pink")
@@ -16,6 +17,7 @@ class Bill:
 
         main_frame = Frame(self.root, bd=5, relief=GROOVE, bg="white")
         main_frame.place(x=0, y=75, width=1400, height=910)
+        
 
         #-> customer details frame
         customer_frame = LabelFrame(main_frame, text="Customer Details", font=("Arial", 22, 'bold'), bg="white", fg="red")
@@ -65,16 +67,74 @@ class Bill:
         self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Price",bd=4)
         self.label_category.grid(row=3,column=0)
         
-        self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
+        self.combo_category=ttk.Entry(product_frame,font=("arial",12,'bold'), width=15)
         self.combo_category.grid(row=3,column=1)
         
         self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Quantity",bd=4)
         self.label_category.grid(row=4,column=0)
         
-        self.combo_category=ttk.Combobox(product_frame,font=("arial",12,'bold'), width=15, state='readonly')
+        self.combo_category=ttk.Entry(product_frame,font=("arial",12,'bold'), width=15)
         self.combo_category.grid(row=4,column=1)
         
         
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Total",bd=4)
+        self.label_category.grid(row=5,column=0)
+        self.combo_category=ttk.Entry(product_frame,font=("arial",12,'bold'), width=15)
+        self.combo_category.grid(row=5,column=1)
+        
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="GST",bd=4)
+        self.label_category.grid(row=6,column=0)
+        self.combo_category=ttk.Entry(product_frame,font=("arial",12,'bold'), width=15)
+        self.combo_category.grid(row=6,column=1)
+        
+        self.label_category=Label(product_frame,font=("arial",18),bg="white",text="Total Amount",bd=4)
+        self.label_category.grid(row=7,column=0)
+        self.combo_category=ttk.Entry(product_frame,font=("arial",12,'bold'), width=15)
+        self.combo_category.grid(row=7,column=1)
+        
+        #-> Bill show area
+        RightLabelFrame=LabelFrame(main_frame,text="Bill Area",font=("arial", 18), bg="white",fg="blue")
+        RightLabelFrame.place(x=800,y=150,width=500,height=450)
+        
+        
+        #-> search bill option
+        search_frame = Frame(main_frame, bd=2, bg="white")
+        search_frame.place(x=800, y=110, width=500, height=40)
+
+        self.lblBill = Label(search_frame, font=(
+            "arial", 12, "bold"), fg="white", bg="red", text="Bill Number")
+        self.lblBill.grid(row=0, column=0, stick=W, padx=2)
+        
+        self.txt_Entry_Search = ttk.Entry(
+            search_frame, font=("arial", 10, "bold"), width=15)
+        self.txt_Entry_Search.grid(row=0, column=1, stick=W, padx=5, pady=2)
+        
+        self.BtnSearch = Button(
+            search_frame, text="Search", font=("arial", 10, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.BtnSearch.grid(row=0, column=2)
+        
+        
+        #-> Button frame
+        btn_frame = Frame(main_frame, bd=2, bg="white")
+        btn_frame.place(x=30, y=560)
+
+        self.BtnAddToCart = Button(btn_frame, text="Add To Cart", height=2, font=("arial", 13, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.BtnAddToCart.grid(row=0, column=0)
+
+        self.Btngenerate_bill = Button(btn_frame, text="Generate Bill", height=2, font=("arial", 13, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.Btngenerate_bill.grid(row=0, column=1)
+
+        self.BtnSave = Button(btn_frame, text="Save Bill", height=2, font=("arial", 13, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.BtnSave.grid(row=0, column=2)
+
+        self.BtnPrint = Button(btn_frame, text="Print", height=2, font=("arial", 13, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.BtnPrint.grid(row=1, column=0)
+
+        self.BtnClear = Button(btn_frame, text="Clear", height=2, font=("arial", 13, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.BtnClear.grid(row=1, column=1)
+
+        self.BtnExit = Button(btn_frame, text="Exit", height=2, font=("arial", 13, "bold"), bg="orangered", fg="white", width=15, cursor="hand2")
+        self.BtnExit.grid(row=1, column=2)
         
         
         
@@ -84,7 +144,12 @@ class Bill:
         
         
         
-        
+
+
+
+
+
+
 
 if __name__ == '__main__':
     root = Tk()
