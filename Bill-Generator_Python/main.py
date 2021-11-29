@@ -135,7 +135,8 @@ class Bill:
         
         if self.totals==1:
             if(self.s==3):
-                self.textbox1.insert('end','\t\t'+"WELCOME TO CART")
+                self.textbox1.insert('end','\t'+"WELCOME TO RKart")
+                self.textbox1.insert('end','\n'+"---------------")
                 self.textbox1.insert('end','\n NAME :'+self.namis)
                 self.textbox1.insert('end','\n MOBILE NO. :'+self.mobi)
                 self.textbox1.insert('end','\n EMAIL :'+self.emai)
@@ -151,7 +152,7 @@ class Bill:
             self.pri.set("")
             self.quan.set("")
         else:
-            messagebox.showerror("billing system","total has been made you cant add more item")
+            messagebox.showerror("billing system","Total has been made you can't add more item")
             self.cat.set("")
             self.name.set("")
             self.pri.set("")
